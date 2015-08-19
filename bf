@@ -2,6 +2,6 @@
 
 out=$(basename $1 .bf)
 echo $1 | ./bfc > "$out.c"
-gcc "$out.c" -O3 -o $out
+gcc "$out.c" -Ofast -o $out -w
 rm "$out.c"
 
